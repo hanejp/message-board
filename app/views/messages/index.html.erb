@@ -13,10 +13,13 @@
 </div>
 
 <%= form_for(Message.new) do |f| %>
-  名前:
-  <%= f.text_field :name %>
-
+  <p>名前:
+  <%= f.text_field :name %></p>
+  <p>
   内容:
-  <%= f.text_field :body %>
+  <%= f.text_area :body %>
+  </p>
+  <p>
   <%= f.submit class: "btn btn-sm btn-primary" %>
+  </p>
 <% end %>
