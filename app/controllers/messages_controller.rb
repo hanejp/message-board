@@ -21,5 +21,3 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:name, :body)
   end
   
-  ## ここまで
-end
