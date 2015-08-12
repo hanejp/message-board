@@ -16,4 +16,3 @@ class MessagesController < ApplicationController
       render 'index'
     end
   ## ここまで
-end
