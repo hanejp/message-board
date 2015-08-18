@@ -12,6 +12,9 @@
   </div>
 </div>
 
+<% #部分テンプレートを読み込んでいる %>
+<%= render 'form' %>
+
 <%= form_for(Message.new) do |f| %>
   名前:
   <%= f.text_field :name %>
