@@ -39,7 +39,7 @@ def edit
 
   private
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :age, :body)
   end
   ## ここまで
   ## ここから追記　8.4 編集・更新処理の開発
