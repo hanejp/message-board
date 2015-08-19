@@ -7,6 +7,7 @@
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
       <%= message.body %>
+              (<%= link_to "edit" , edit_message_path(message) %>)
       <br>
     <% end %>
   </div>
@@ -15,14 +16,7 @@
 <% #部分テンプレートを読み込んでいる %>
 <%= render 'form' %>
 
-<%= form_for(Message.new) do |f| %>
-  名前:
-  <%= f.text_field :name %>
-<br><br>
-  内容:
-  <%= f.text_area :body, size: "100x10" %><br><br>
-  <%= f.submit class: "btn btn-sm btn-primary" %><br>
-<% end %>
+
 
 <%= form_for(@message) do |f| %>
   <% if @message.errors.present? %>
